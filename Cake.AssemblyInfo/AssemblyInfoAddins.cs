@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Cake.Core;
+﻿using Cake.Core;
 using Cake.Core.Annotations;
 
 namespace Cake.AssemblyInfo
@@ -8,9 +7,10 @@ namespace Cake.AssemblyInfo
     public static class AssemblyInfoAddins
     {
         [CakeMethodAlias]
-        public static void EditAssemblyInfo(this ICakeContext context, Cake.Core.IO.FilePath projectFile)
+        public static void EditAssemblyInfo(this ICakeContext context, Cake.Core.IO.FilePath assemblyInfoPath)
         {
-            
+            var assemblyInfoManager = new AssemblyInfoManager(context.FileSystem, context.Environment);
+            assemblyInfoManager.EditAssemblyInfo(assemblyInfoPath);
         }
     }
 }
