@@ -25,7 +25,8 @@ using Cake.AssemblyInfo.UnitTests.Models;
 [assembly: Guid(""2ACBE7CB-7DC7-4E27-94A0-B537B1F0296B"")]
 [assembly: ComVisible(true)]
 [assembly: CLSCompliant(false)]
-[assembly: FooModule]
+[assembly: Cake.AssemblyInfo.UnitTests.Models.FooModule]
+[assembly: Cake.AssemblyInfo.UnitTests.Models.FooWithArgsModuleAttribute(true,""A Value"")]
 ";
 
         [Fact]

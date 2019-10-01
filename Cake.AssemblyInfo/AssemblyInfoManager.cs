@@ -48,12 +48,12 @@ namespace Cake.AssemblyInfo
 
 
                 // get the attributes
-                var attributes = compilation.Assembly.GetAttributes();
+                var attributes = compilation.Assembly.GetAttributes().Where(x => x.AttributeClass.ToString().Contains("Foo"));
                 foreach (var attribute in attributes)
                 {
                     var ctorArgs = attribute.ConstructorArguments;
                     var propArgs = attribute.NamedArguments;
-
+                    
                 }
             }
         }
